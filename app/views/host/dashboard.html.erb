@@ -1,10 +1,44 @@
 <!DOCTYPE>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
-<h1>Welcome to Host Dashboard</h1>
+Welcome <%= current_host.email %>!
 
-<button class="js-submit" type="submit">
-	<a href="/hosts/sign_out" data-method="delete">Sign Out</a>
-</button>
+	<button class="js-submit" type="submit">
+		<a href="/hosts/sign_out" data-method="delete">Sign Out</a>
+	</button>
+<br>
+<br>
+	<div class="panel-group" >
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			<h3 class="panel-title">Panel title</h3>
+			</div>
+			<div class="panel-body">
+				<ul>
+					<li>There are no schduled events</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			<h3 class="panel-title">
+			  <a href="/events">Create Event</a>
+			</h3>
+		</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			<h3 class="panel-title">
+			  <a href="/">Send Payments</a>
+			</h3>
+			</div>
+		</div>
+    </div>
+
+
+			

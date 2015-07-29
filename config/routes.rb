@@ -18,12 +18,8 @@ Rails.application.routes.draw do
     end
   end
 
-  
   root to: "site#home"
-  
-  
-  resources :host do
-    resources :artists
-  end
+
+  resources :host, :artists, :events
 
 end

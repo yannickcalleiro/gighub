@@ -4,4 +4,9 @@ class HostController < ApplicationController
 	def home
 		render('dashboard')
 	end
+
+	def index
+		@host = Host.all
+	end
+	
 end
