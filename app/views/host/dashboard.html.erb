@@ -21,7 +21,17 @@ Welcome <%= current_host.email %>!
 			</div>
 			<div class="panel-body">
 				<ul>
-					<li>There are no schduled events</li>
+					<% if @events.empty? %>
+						<li>There are no schduled events</li>
+					<% else %>
+						<% @events.each do |evt| %>
+						<li>
+							<%= evt.title %> - 
+							<%= evt.date %>
+						</li>
+						<% end %>
+					<% end %>
+					
 				</ul>
 			</div>
 		</div>

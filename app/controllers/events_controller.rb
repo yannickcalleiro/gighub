@@ -9,13 +9,13 @@ class EventsController < ApplicationController
 	def create
 		@events = Event.new(event_params)
 		if @events.save
-			redirect_to(host_dashboard_home)
+			redirect_to(host_dashboard_path)
 		else
 			render("new")
 		end
 	end
 
 	def event_params
-		return params.require(:events).permit(:title, :time, :date, :location, :artist)
+		return params.require(:event).permit(:title, :time, :date, :location)
 	end
 end
