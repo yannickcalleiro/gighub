@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   devise_for :hosts
 
   get 'host/dashboard' => 'host#home' 
-  get 'artist/dashboard' => 'artist#home' 
+  get 'artist/dashboard' => 'artist#home'
+
+  get '/events' => 'event#create'
 
   authenticated :artist do
     devise_scope :artists do
