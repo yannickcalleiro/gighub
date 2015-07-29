@@ -1,0 +1,22 @@
+<h1>Create Event Form</h1>
+
+<!-- Event Form -->
+<%= form_for @events do |frm| %>
+	<div class="form_group">
+		<%= frm.label(:title)%> :
+		<%= frm.text_field(:title, :class => "form-control")%>
+	</div>
+	<div class="form_group">
+		<%= frm.label(:time)%> :
+		<%= frm.datetime_field(:time, :class => "form-control")%>
+
+	<div class="form_group">
+		<%= frm.label(:location)%> :
+		<%= frm.text_field(:location, :class => "form-control")%>
+	</div>
+
+	<div class="form_group">
+		<%= frm.label(:date)%> :
+		<%= frm.date_field(:date, :class => "form-control")%>
+	</div>
+<% end %>
