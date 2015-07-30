@@ -2,6 +2,13 @@
 
 <h1><%= current_artist.name %></h1>
 
+<% if current_artist.image.url.present? %>
+  <p><img src="http://www.crazyleafdesign.com/blog/wp-content/uploads/2012/10/8-30-spooky-skull-logos.jpg"></a></p>
+
+<% else %>
+  <p><%= image_tag current_artist.image.url(:medium) %></p>
+<% end %>
+
 About: <%= current_artist.about %> <br />
 <br />
 
