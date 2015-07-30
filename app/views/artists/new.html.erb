@@ -1,0 +1,41 @@
+<h1>Create Profile</h1>
+
+<!-- Profile Form -->
+<%= form_for @artists do |frm| %>
+	<div class="form_group">
+		<%= frm.label(:name)%> :
+		<%= frm.text_field(:name, :class => "form-control")%>
+	</div>
+	<div class="form_group">
+		<%= frm.label(:role)%> :
+		<%= frm.text_field(:role, :class => "form-control")%>
+
+	<div class="form_group">
+		<%= frm.label(:about)%> :
+		<%= frm.text_field(:about, :class => "form-control")%>
+	</div>
+
+	<div class="form_group">
+		<%= frm.label(:soundcloud_address)%> :
+		<%= frm.text_field(:soundcloud_address, :class => "form-control")%>
+	</div>
+
+
+	<div class="form_group">
+		<%= frm.label(:youtube_address)%> :
+		<%= frm.text_field(:youtube_address, :class => "form-control")%>
+	</div>
+
+	<div class="form_group">
+		<%= frm.label(:price)%> :
+		<%= frm.text_field(:price, :class => "form-control")%>
+	</div>
+
+
+	<div class="form_group">
+		<%= frm.label(:hour)%> :
+		<%= frm.text_field(:hour, :class => "form-control")%>
+	</div>
+
+	<button type="submit">Create New Event</button>
+<% end %>

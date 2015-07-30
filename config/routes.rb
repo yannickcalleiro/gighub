@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   devise_for :hosts
 
   get 'host/dashboard' => 'host#home' 
-  get 'artist/dashboard' => 'artist#home'
+  get 'artists/dashboard' => 'artists#home'
 
   authenticated :artist do
     devise_scope :artists do
-      root to: 'artist#home', as: :artist_dashboard_home
+      root to: 'artists#home', as: :artist_dashboard_home
     end
   end
 
