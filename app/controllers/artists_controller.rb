@@ -5,25 +5,13 @@ class ArtistsController < ApplicationController
 		render('dashboard')
 	end
 
-	def new
-		@artists = Artist.new
-		render('new')
-	end
-
-	def create
-		@artists = Artist.new(event_params)
-		if @artists.save
-			redirect_to(host_dashboard_path)
-		else
-			render("new")
-		end
+	def edit
+		@artists = Artist.all
 	end
 
 	def show
-		@artists
+		@artists = Artist.all
+		render('show')
 	end
 
-	def event_params
-		return params.require(:event).permit(:title, :time, :date, :location)
-	end
 end

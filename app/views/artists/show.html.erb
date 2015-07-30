@@ -1,0 +1,19 @@
+<script type="text/javascript" src="https://w.soundcloud.com/player/api.js"></script>
+
+<h1><%= current_artist.name %></h1>
+
+About: <%= current_artist.about %> <br />
+<br />
+Audio: <br />
+<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
+
+
+<br />
+<br />
+
+Video: <br />
+<iframe width="560" height="315" src="<%= current_artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
+
+<br />
+<br />	
+<button><a href="/">Back to Account</a></button>
