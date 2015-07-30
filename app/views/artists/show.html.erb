@@ -4,14 +4,20 @@
 
 About: <%= current_artist.about %> <br />
 <br />
-Audio: <br />
-<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
+
 
 <br />
 <br />
+<% if current_artist.video_info.nil? %>
+	Audio: <br />
+	<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
+	<% else %>
+	Audio: <br />
+	<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
 
-Video: <br />
-<iframe width="560" height="315" src="<%= current_artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
+	Video: <br />
+	<iframe width="560" height="315" src="<%= current_artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
+	<% end %>
 
 <br />
 <br />	
