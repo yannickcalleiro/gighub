@@ -6,7 +6,7 @@ class Artist < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-         def video_info
-         	return VideoInfo.new(youtube_address)
-         end
+  def video_info
+	return VideoInfo.new(youtube_address)
+  end
 end
