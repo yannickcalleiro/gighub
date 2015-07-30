@@ -14,25 +14,24 @@ Welcome <%= current_host.email %>!
 <br>
 
 <!-- Panel Group -->
-	<div class="panel-group" >
-		<div class="panel panel-default">
-			<div class="panel-heading">
-			<h3 class="panel-title">Panel title</h3>
-			</div>
+  <div class="panel-group" >
+ 	<div class="panel panel-default">
+      <div class="panel-heading">
+		<h3 class="panel-title">Panel title</h3>
+		  </div>
 			<div class="panel-body">
-				<ul>
-					<% if @events.empty? %>
-						<li>There are no schduled events</li>
-					<% else %>
-						<% @events.each do |evt| %>
-						<li>
-							<%= evt.title %> - 
-							<%= evt.date %>
-						</li>
-						<% end %>
-					<% end %>
-					
-				</ul>
+			  <ul>
+				<% if @events.empty? %>
+					<li>There are no schduled events</li>
+				<% else %>
+					<% @events.each do |evt| %>
+					<li>
+					  <%= evt.title %> - 
+					  <%= evt.date %>
+					</li>
+				  <% end %>
+				<% end %>
+			  </ul>
 			</div>
 		</div>
 
