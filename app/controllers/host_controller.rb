@@ -3,6 +3,7 @@ class HostController < ApplicationController
 	
 	def home
 		@events = Event.all
+		@events = @events.sort_by{|date, name|name}
 		render('dashboard')
 	end
 
