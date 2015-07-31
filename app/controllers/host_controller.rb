@@ -2,8 +2,9 @@ class HostController < ApplicationController
 	before_action :authenticate_host!
 	
 	def home
-		@events = Event.all
-		@events = @events.sort_by{|date, name|name}
+
+		@events = Event.new_event_filter.order(date: :asc)
+
 		render('dashboard')
 	end
 

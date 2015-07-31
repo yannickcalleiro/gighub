@@ -15,6 +15,10 @@ class EventsController < ApplicationController
 		end
 	end
 
+	def search_artist
+		
+	end
+
 	def event_params
 		return params.require(:event).permit(:title, :time, :date, :location)
 	end
