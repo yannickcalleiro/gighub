@@ -1,3 +1,7 @@
+<header>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</header>
+
 <h1>Create Event Form</h1>
 
 <!-- Event Form -->
@@ -19,6 +23,15 @@
 		<%= frm.label(:date)%> :
 		<%= frm.date_field(:date, :class => "form-control")%>
 	</div>
+
+	
+<!-- Artist Search -->
+	<button id:"search_artist">Search</button>
+	<br>
+	<button id:"add_artist">Add Artist to Event</button>
+	<br>
+
+
 
 	<button type="submit">Create New Event</button>
 <% end %>
