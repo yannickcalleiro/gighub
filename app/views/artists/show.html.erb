@@ -32,12 +32,12 @@
 	<% if current_artist.video_info.nil? %>
 
 		Audio: <br />
-		<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
+		<p><iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe></p>
 
 		<% else %>
 
 		Audio: <br />
-		<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
+		<p><iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe></p>
 
 		Video: <br />
 		<iframe width="560" height="315" src="<%= current_artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
