@@ -1,34 +1,48 @@
 <script type="text/javascript" src="https://w.soundcloud.com/player/api.js"></script>
 
-<h1><%= current_artist.name %></h1>
+<% if current_artist.display_name.present? %>
 
-<% if current_artist.image.url.present? %>
-  <p><img src="http://www.crazyleafdesign.com/blog/wp-content/uploads/2012/10/8-30-spooky-skull-logos.jpg"></a></p>
+ <h1><%= current_artist.display_name %></h1>
 
 <% else %>
-  <p><%= image_tag current_artist.image.url(:medium) %></p>
+
+ <h1><%= current_artist.name %></h1>
+
 <% end %>
 
-About: <%= current_artist.about %> <br />
-<br />
+ 
 
+<% if current_artist.image.url != "/images/original/missing.png" %>
+	
+ <p><%= image_tag current_artist.image.url(:medium) %></p>
 
-<br />
-<br />
+<% else %>
 
-<% if current_artist.video_info.nil? %>
+  <p><img src="http://www.crazyleafdesign.com/blog/wp-content/uploads/2012/10/8-30-spooky-skull-logos.jpg"></a></p>
 
-	Audio: <br />
-	<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
-
-	<% else %>
-
-	Audio: <br />
-	<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
-
-	Video: <br />
-	<iframe width="560" height="315" src="<%= current_artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
 <% end %>
+
+<p>About: <%= current_artist.about %></p>
+<br />
+
+
+<br />
+<br />
+<p>
+	<% if current_artist.video_info.nil? %>
+
+		Audio: <br />
+		<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
+
+		<% else %>
+
+		Audio: <br />
+		<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
+
+		Video: <br />
+		<iframe width="560" height="315" src="<%= current_artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
+	<% end %>
+</p>
 
 <br />
 <br />	
