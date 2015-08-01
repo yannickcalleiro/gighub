@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   get 'host/dashboard' => 'host#home' 
   get 'artists/dashboard' => 'artists#home'
 
+
+  get '/artist_search' => 'events#search_artist'
+  post '/search' => 'events#select_artist'
+
   authenticated :artist do
     devise_scope :artists do
       root to: 'artists#home', as: :artist_dashboard_home
