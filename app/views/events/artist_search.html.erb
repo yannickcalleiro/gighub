@@ -1,0 +1,23 @@
+<h1>Add artist to Event</h1>
+
+<!-- Artist Search -->
+
+<div class="field">
+  <%= label_tag(:role)%><br />
+  <%= select_tag :role, options_for_select(['DJ','Band','Solo'], "DJ"), class: "js-search" %>
+</div>
+<br />
+<div class="field">
+  <%= label_tag(:price)%><br />
+  <%= text_field_tag(:price)%>
+</div>
+
+<p><button class="js-artists">Search</button></p>
+
+
+<ul class="js-results">
+	<h4>Search Results:</h4>
+</ul>
+
+
+<p><button><a href="/events/new">Back to Create Event</a></button></p>

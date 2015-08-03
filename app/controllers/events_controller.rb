@@ -3,13 +3,14 @@ class EventsController < ApplicationController
 
 	def new
 		@events = Event.new
+		@artists = Artist.all
 		render("new")
 	end
 
 	def create
 		@events = Event.new(event_params)
 		if @events.save
-			redirect_to(host_dashboard_path)
+			redirect_to("/artist_search")
 		else
 			render("new")
 		end
@@ -17,6 +18,23 @@ class EventsController < ApplicationController
 
 	def search_artist
 		
+		render("artist_search")
+	end
+	def search
+		role = params[:request]
+    	artists = Artist.where("role LIKE ?", role.downcase)
+    	package = []
+    	artists.each do |artist|
+    		newArtist = {
+    			display_name: artist.display_name
+    		}
+    		package.push(newArtist)
+    	end
+    	render :json => package
+	end
+
+	def select_artist
+		redirect_to("break")
 	end
 
 	def event_params

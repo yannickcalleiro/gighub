@@ -4,13 +4,12 @@ class ArtistsController < ApplicationController
 	def index
 		render('dashboard')
 	end
-	
+
 	def home
 		render('dashboard')
 	end
 
 	def edit
-		@artists = Artist.all
 	end
 
 	def show

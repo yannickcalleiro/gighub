@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
 
   get '/artist_search' => 'events#search_artist'
+  get '/search/:request' => 'events#search'
   post '/search' => 'events#select_artist'
 
   authenticated :artist do

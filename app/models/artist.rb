@@ -11,9 +11,13 @@ class Artist < ActiveRecord::Base
 
   def video_info
   	if youtube_address.present?
-	  return VideoInfo.new(youtube_address)
+	    return VideoInfo.new(youtube_address)
   	else
   	  return nil
-	end
+	  end
   end
+
+  def self.search(role)
+    artist = Artist.where(['role = ?', role])
+    end
 end
