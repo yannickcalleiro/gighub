@@ -2,13 +2,16 @@
 // ***Artist Search***
 $(function(){
 function searchResults () {
-var selection = $('.js-search').val()
-  var request = $.get('/search/'+selection);
+var role_select = $('.js-role').val()
+var price_select = $('.js-price').val()
+var hour_select = $('.js-hour').val()
+
+  var request = $.get('/search/' + role_select + "/" + price_select + "/" + hour_select);
 
   function artistResults (data) {
     $('.js-results').empty()
     data.forEach(function(artist) {
-      $('.js-results').append('<li>' + "Name: " + artist.display_name + '</li>' )
+      $('.js-results').append('<li>' + "Name: " + artist.display_name + '<button href="/events/<% @events.id %>">Add Artist</button>' + '</li>' )
     });
   }
 

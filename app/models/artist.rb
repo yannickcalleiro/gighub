@@ -16,8 +16,11 @@ class Artist < ActiveRecord::Base
   	  return nil
 	  end
   end
+  
+  # def self.search(role, price, hour)
+  #   role = params[:request]
+  #     artists = Artist.where("role LIKE ?", role.downcase)
+  #   artist = Artist.where(['role = ?', role])
+  # end
 
-  def self.search(role)
-    artist = Artist.where(['role = ?', role])
-    end
 end

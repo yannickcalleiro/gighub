@@ -4,13 +4,20 @@
 
 <div class="field">
   <%= label_tag(:role)%><br />
-  <%= select_tag :role, options_for_select(['DJ','Band','Solo'], "DJ"), class: "js-search" %>
+  <%= select_tag :role, options_for_select(['DJ','Band','Solo'], "DJ"), class: "js-role" %>
 </div>
 <br />
 <div class="field">
-  <%= label_tag(:price)%><br />
-  <%= text_field_tag(:price)%>
+  <%= label_tag(:hour)%><br />
+  <%= select_tag :hour, options_for_select((1..10)), class: "js-hour" %>
 </div>
+
+<br />
+<div class="field">
+  <%= label_tag(:price)%><br />
+  <%= text_field_tag :price, "Price", class: "js-price" %>
+</div>
+
 
 <p><button class="js-artists">Search</button></p>
 
@@ -21,3 +28,5 @@
 
 
 <p><button><a href="/events/new">Back to Create Event</a></button></p>
+<br />
+<p><button><a href="/">Back to Account</a></button></p>

@@ -26,8 +26,10 @@ Welcome <%= current_host.name %>!
 				<% else %>
 					<% @events.each do |evt| %>
 					<li>
-					  <%= evt.title %> - 
+					  <%= evt.title %> 
 					  <%= evt.date %>
+					  <a href="/events/<%= evt.id %>/edit">Edit</a>
+					 
 					</li>
 				  <% end %>
 				<% end %>

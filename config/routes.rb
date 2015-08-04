@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
 
   get '/artist_search' => 'events#search_artist'
-  get '/search/:request' => 'events#search'
-  post '/search' => 'events#select_artist'
+  get '/search/:role/:price/:hour' => 'events#search'
+  patch '/events/:id' => 'events#update'
 
   authenticated :artist do
     devise_scope :artists do

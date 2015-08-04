@@ -1,0 +1,14 @@
+<h1>Edit Event Page</h1>
+
+<p>This event is called <%= @events.title %>. </p>
+
+<% if @events.artist.present? %>
+	<%= @events.artist %> will be performing. 
+
+<br />
+<% else %>
+	<a href="/artist_search">Add artist to this event</a>
+<% end %>
+
+<br />
+<p><a href="/">Back to account</a></p>
