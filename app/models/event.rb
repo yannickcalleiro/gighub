@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
 	belongs_to :hosts
-	belongs_to :artists
+	has_and_belongs_to_many :artists
 
    def self.new_event_filter
    	start = DateTime.now

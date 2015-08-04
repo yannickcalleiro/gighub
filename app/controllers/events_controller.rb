@@ -22,8 +22,11 @@ class EventsController < ApplicationController
 	end
 
 	def search_artist
+		@artists = Artist.all
+		@event = Event.find_by_id(params[:id])
 		render("artist_search")
 	end
+
 	def search
 		role = params[:role]
 		price = params[:price]
@@ -34,7 +37,8 @@ class EventsController < ApplicationController
     	package = []
     	artists.first(5).each do |artist|
     		newArtist = {
-    			display_name: artist.display_name
+    			display_name: artist.display_name,
+    			id: artist.id
     		}
     		package.push(newArtist)
     	end
@@ -42,15 +46,15 @@ class EventsController < ApplicationController
 	end
 
 	def update
-		@events = Event.find(params[:id])
-		if @events.update_attributes(event_params)
-			redirect_to("/")
-		else
-			render("new")
-		end
+		@event = Event.find(params[:event_id])
+		@artist = Artist.find(params[:id])
+		
+		 @event.artists.push(@artist)
+
+		render(:status => 200, :json => {:response => :confirmed})
 	end
 
 	def event_params
-		return params.require(:event).permit(:title, :time, :date, :location, :artist)
+		return params.require(:event).permit(:title, :time, :date, :location, :artist_id)
 	end
 end

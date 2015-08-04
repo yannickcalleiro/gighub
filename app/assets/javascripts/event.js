@@ -1,27 +1,50 @@
 
 // ***Artist Search***
-$(function(){
-function searchResults () {
-var role_select = $('.js-role').val()
-var price_select = $('.js-price').val()
-var hour_select = $('.js-hour').val()
+$(document).ready(function(){
+  $(function(){
+  function searchResults () {
+  var role_select = $('.js-role').val()
+  var price_select = $('.js-price').val()
+  var hour_select = $('.js-hour').val()
+  var event_id = $('.event-id').val();
 
-  var request = $.get('/search/' + role_select + "/" + price_select + "/" + hour_select);
+    var request = $.get('/search/' + role_select + "/" + price_select + "/" + hour_select);
 
-  function artistResults (data) {
-    $('.js-results').empty()
-    data.forEach(function(artist) {
-      $('.js-results').append('<li>' + "Name: " + artist.display_name + '<button href="/events/<% @events.id %>">Add Artist</button>' + '</li>' )
-    });
+    function artistResults (data) {
+      $('.js-results').empty()
+      console.log(data)
+      data.forEach(function(artist) {
+        if(artist.display_name != ""){
+          $('.js-results').append('<li>' + '<button id="' + artist.id + '">Add Artist</button>' +  artist.display_name + '</li>' )
+          $('#' + artist.id).on('click', addArtistToEvents)
+        }
+      });
+
+    }1
+
+    function handleError (err1, err2, err3) {
+      console.error('OH NO!!', err1, err2, err3);
+    }
+    
+    request.done(artistResults);
+    request.fail(handleError);
   }
 
-  function handleError (err1, err2, err3) {
-    console.error('OH NO!!', err1, err2, err3);
-  }
- 
-  request.done(artistResults);
-  request.fail(handleError);
-}
+  $('.js-artists').on('click', searchResults);
+  })
 
-$('.js-artists').on('click', searchResults);
+  function addArtistToEvents(event){
+    var event_id = $('.event-id').attr('id');
+    console.log(event.target)
+    var artist_id = $(event.target).attr('id')
+    var request = $.post('/events/' + event_id + '/add_artists/' + artist_id);
+    
+    request.done(function(event){
+      alert("added artist to event") 
+      setTimeout(2000, window.location.replace("/"))
+    })
+    request.fail(function(event){
+      alert("Fail")
+    })
+  };
 })

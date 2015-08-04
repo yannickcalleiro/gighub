@@ -1,6 +1,7 @@
 <h1>Add artist to Event</h1>
 
 <!-- Artist Search -->
+<span style="display:none;" id="<%= @event.id %>" class="event-id"></span>
 
 <div class="field">
   <%= label_tag(:role)%><br />
@@ -18,7 +19,7 @@
   <%= text_field_tag :price, "Price", class: "js-price" %>
 </div>
 
-
+<br />
 <p><button class="js-artists">Search</button></p>
 
 
@@ -26,7 +27,7 @@
 	<h4>Search Results:</h4>
 </ul>
 
-
-<p><button><a href="/events/new">Back to Create Event</a></button></p>
 <br />
+<br />
+<p><button><a href="/events/<%= @event.id %>/edit">Back to Edit Event</a></button></p>
 <p><button><a href="/">Back to Account</a></button></p>

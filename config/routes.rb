@@ -7,9 +7,11 @@ Rails.application.routes.draw do
   get 'artists/dashboard' => 'artists#home'
 
 
-  get '/artist_search' => 'events#search_artist'
+  get '/events/:id/artist_search' => 'events#search_artist'
+
   get '/search/:role/:price/:hour' => 'events#search'
-  patch '/events/:id' => 'events#update'
+
+  post '/events/:event_id/add_artists/:id' => 'events#update'
 
   authenticated :artist do
     devise_scope :artists do
