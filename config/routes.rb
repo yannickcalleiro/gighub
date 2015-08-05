@@ -13,8 +13,6 @@ Rails.application.routes.draw do
 
   post '/events/:event_id/add_artists/:id' => 'events#update'
 
-  # post '/artists/:id' => 'devise/registrations#update'
-
   authenticated :artist do
     devise_scope :artists do
       root to: 'artists#home', as: :artist_dashboard_home
