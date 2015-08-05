@@ -10,7 +10,7 @@ class EventsController < ApplicationController
 	def create
 		@events = Event.new(event_params)
 		if @events.save
-			redirect_to("/artist_search")
+			redirect_to("/events/#{@events.id}/artist_search")
 		else
 			render("new")
 		end
