@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+
 /*!
  * bootswatch v3.3.5
  * Homepage: http://bootswatch.com
@@ -149,6 +150,8 @@ input::-moz-focus-inner {
   padding: 0;
 }
 input {
+  padding: 16px 19px;
+  width: 100%;
   line-height: normal;
 }
 input[type="checkbox"],
@@ -1096,6 +1099,8 @@ input,
 button,
 select,
 textarea {
+  width: 100%;
+  padding: 16px;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -1413,8 +1418,10 @@ a.bg-danger:focus {
   background-color: #e4b9b9;
 }
 .page-header {
+  text-align: center;
+  padding-top: 18px;
   padding-bottom: 9.5px;
-  margin: 42px 0 21px;
+  margin: 18px 0 0px;
   border-bottom: 1px solid #dddddd;
 }
 ul,
@@ -6968,11 +6975,12 @@ label,
 .help-block,
 .checkbox,
 .radio {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
 }
 input[type="radio"],
 input[type="checkbox"] {
+  width: 15%;
   margin-top: 1px;
 }
 .nav .open > a,

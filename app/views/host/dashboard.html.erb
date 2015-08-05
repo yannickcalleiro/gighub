@@ -15,7 +15,7 @@ Welcome <%= current_host.name %>!
 
 <!-- Panel Group -->
   <div class="panel-group" >
- 	<div class="panel panel-default">
+    <div class="panel panel-default">
       <div class="panel-heading">
 		<h3 class="panel-title">Scheduled Events</h3>
 		  </div>
@@ -28,8 +28,7 @@ Welcome <%= current_host.name %>!
 					<li>
 					  <%= evt.title %> 
 					  <%= evt.date %>
-					  <a href="/events/<%= evt.id %>/edit">Edit</a>
-					 
+					  <a href="/events/<%= evt.id %>/edit">Edit</a> 
 					</li>
 				  <% end %>
 				<% end %>

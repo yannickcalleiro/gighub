@@ -1,19 +1,17 @@
 <!DOCTYPE>
 <head>
   <link rel="stylesheet" type="text/css" href="app/assests/stylesheets/application.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <!-- Header -->
 <div class="page-header">
-  <h1>GigHub</h1>
+  <h1>GigHub.com</h1>
 </div>
 
-<!-- Navagation -->
-<nav class="navbar navbar-default">
+<!-- Static Navagation -->
+<div class="navbar navbar-default navbar-fixed-top navbar-right">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -22,43 +20,143 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
     </div>
+  
 
+<!-- Links -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#">About <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Media</a></li>
 
 <!-- Sign In Button-->  
         <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Log In <span class="caret"></span></a>
-          <ul class="dropdown-menu" role=menu>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Log In<span class="caret"></span></a>
+          <ul class="dropdown-menu" >
             <li><a href="/hosts/sign_in">Login as Host</a></li>
             <li><a href="/artists/sign_in">Login as Artist</a></li>
           </ul>
         </li> 
 
-<!-- Create New Button -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sign Up <span class="caret"></span></a>
-          <ul class="dropdown-menu">
+<!-- Sign Up New Button -->
+        <li class="dropdown-menu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sign Up<span class="caret"></span></a>
+          <ul class="dropdown-menu" role=menu>
             <li><a href="/hosts/sign_up">New Host</a></li>
             <li><a href="/artists/sign_up">New Artist</a></li>
           </ul>
         </li>
-
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
       </ul>
     </div>
   </div>
-</nav>
+</div>
+
+<!-- Cover Photo -->
+<img class="landing-img" src="http://portfolio-kwarc.pl/music-nation-bootstrap-v-1-1/img/slider-photos/concert-1.jpg">
 
 
+<!-- Body -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+    <div class="center-heading">
+    <h2><strong>What</strong> we do</h2>
+    <span class="center-line"></span>
+    <p class="sub-text margin40">
+        Bacon ipsum dolor amet nulla kielbasa mollit bacon, est boudin ham laboris aute fugiat prosciutto brisket. Veniam proident qui, occaecat spare ribs turducken beef tri-tip et irure. Lorem proident fatback voluptate doner ham hock, ea hamburger chuck adipisicing. Labore irure picanha officia proident eiusmod ut chuck.</p>
+    </div>
+    </div>
+  </div>
+  <div class="divide50"></div>
 
+<!-- About -->
+  <div class="row">
+      <div class="col-md-3 col-sm-6 margin30">
+          <div class="colored-boxed green">
+              <i class="fa fa-cogs"></i>
+              <h3>Free support &amp; updates</h3>
+              <span class="center-line"></span>
+              <p>
+                  Nullam vulputate lorem ut leo. Sed volutpat. Etiam non pede. Nullam et mauris. 
+              </p>
+          </div>
+      </div><!--colored boxed col end-->
+      <div class="col-md-3 col-sm-6 margin30">
+          <div class="colored-boxed dark">
+              <i class="fa fa-tablet"></i>
+              <h3>Ultra responsive</h3>
+              <span class="center-line"></span>
+              <p>
+                  Nullam vulputate lorem ut leo. Sed volutpat. Etiam non pede. Nullam et mauris. 
+              </p>
+          </div>
+      </div><!--colored boxed col end-->
+      <div class="col-md-3 col-sm-6 margin30">
+          <div class="colored-boxed blue">
+              <i class="fa fa-heart"></i>
+              <h3>made with love</h3>
+              <span class="center-line"></span>
+              <p>
+                  Nullam vulputate lorem ut leo. Sed volutpat. Etiam non pede. Nullam et mauris. 
+              </p>
+          </div>
+      </div><!--colored boxed col end-->
+      <div class="col-md-3 col-sm-6 margin30">
+          <div class="colored-boxed red">
+              <i class="fa fa-sliders"></i>
+              <h3>Premium plugins</h3>
+              <span class="center-line"></span>
+              <p>
+                  Nullam vulputate lorem ut leo. Sed volutpat. Etiam non pede. Nullam et mauris. 
+              </p>
+          </div>
+      </div><!--colored boxed col end-->
+  </div>
+</div>
 
+<!-- More Shit -->
+<div class="col-sm-6 col-sm-offset-6 no-padding gray">
+                    <div class="no-padding-inner gray">
+                        <h3 class="wow animated fadeInDownfadeInRight animated" style="visibility: visible;">Core features of <span class="colored-text">assan</span></h3>
+                        <div class="services-box margin30 wow animated fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+                            <div class="services-box-icon">
+                                <i class="fa fa-tablet"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>Fully Responsive</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                        </div><!--service box-->
+                        <div class="services-box margin30 wow animated fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+                            <div class="services-box-icon">
+                                <i class="fa fa-twitter"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>bootstrap 3</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                        </div><!--service box-->
+
+                        <div class="services-box margin30 wow animated fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+                            <div class="services-box-icon">
+                                <i class="fa fa-code"></i>
+                            </div><!--services icon-->
+                            <div class="services-box-info">
+                                <h4>80+ valid HTML5 Pages and much more...</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing metus. elit. Quisque rutrum pellentesque imperdiet.
+                                </p>
+                            </div>
+                            <div class="divide30"></div>
+                            <p><a href="#" class="btn btn-theme-dark btn-lg">Purchase Now</a></p>
+                        </div><!--service box-->
+
+                    </div>
+                </div>
 
 
 
