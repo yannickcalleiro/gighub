@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :artists
+  devise_for :artists, :controllers => {:registrations => "registrations"}
   devise_for :hosts
 
   get 'host/dashboard' => 'host#home' 
@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/search/:role/:price/:hour' => 'events#search'
 
   post '/events/:event_id/add_artists/:id' => 'events#update'
+
+  # post '/artists/:id' => 'devise/registrations#update'
 
   authenticated :artist do
     devise_scope :artists do

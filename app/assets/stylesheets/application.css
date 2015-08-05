@@ -13,6 +13,24 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+.landing-img {
+  max-width: 100%;
+  max-width: 100%;
+}
+
+.caption {
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    z-index: 10;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    bottom: auto;
+    top: 50%;
+    margin-top: -92px;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
