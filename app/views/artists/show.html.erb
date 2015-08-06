@@ -1,49 +1,75 @@
+<!-- Header -->
+<div class="divide-head"></div>
+
+<!-- Static Navagation -->
+<div class="navbar navbar-default navbar-fixed-top navbar-right">
+  <div class="navbar navbar-brand-glyphicon">
+  <span class="glyphicon glyphicon-headphones"></span>
+  </div>
+  <a href="/" class="navbar-brand">Gighub.com</a>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  
+<!-- Signout -->
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="/hosts/sign_out" data-method="delete">Sign Out</a></li>
+      </ul>
+    </div><!-- closed sign out -->
+  </div> <!-- Closed Container -->
+</div><!-- Closed NavBar -->
+
 <script type="text/javascript" src="https://w.soundcloud.com/player/api.js"></script>
 
-<% if current_artist.display_name.present? %>
+<div class="create-form">
+<div class="col-sm-3"></div>
+		
+			<div class="col-sm-6">
+				<div class="well bs-component">
+					<div class="row artist-top"></div>
+					<div class="col-sm-6">
+						<% if current_artist.image.url != "/images/original/missing.png" %>
+						 <%= image_tag current_artist.image.url(:medium) %>
+						<% else %>
+						  <img src="http://www.crazyleafdesign.com/blog/wp-content/uploads/2012/10/8-30-spooky-skull-logos.jpg"></a><br />
+						<% end %>					
+					</div>
+					<div class="col-sm-6">
+						<% if current_artist.display_name.present? %>
+							<p><h1><%= current_artist.display_name %></h1></p> 
+						<% else %>
+							 <p><h1><%= current_artist.name %></h1></p>
+						<% end %>
+						
+						About: <%= current_artist.about %><br />
+							<br />
+					</div>
+				<br />
+					<div class="row artist-bottom">
+						<div class="media-player">
+							<% if current_artist.video_info.nil? %>
+								<p>Audio: </p> <br />
+								<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
 
- <h1><%= current_artist.display_name %></h1>
+								<% else %>
 
-<% else %>
+								<p>Audio: </p><br />
+								<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe><br />
 
- <h1><%= current_artist.name %></h1>
-
-<% end %>
-
- 
-
-<% if current_artist.image.url != "/images/original/missing.png" %>
-	
- <p><%= image_tag current_artist.image.url(:medium) %></p>
-
-<% else %>
-
-  <p><img src="http://www.crazyleafdesign.com/blog/wp-content/uploads/2012/10/8-30-spooky-skull-logos.jpg"></a></p>
-
-<% end %>
-
-<p>About: <%= current_artist.about %></p>
-<br />
-
-
-<br />
-<br />
-<p>
-	<% if current_artist.video_info.nil? %>
-
-		Audio: <br />
-		<p><iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe></p>
-
-		<% else %>
-
-		Audio: <br />
-		<p><iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe></p>
-
-		Video: <br />
-		<iframe width="560" height="315" src="<%= current_artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
-	<% end %>
-</p>
-
-<br />
-<br />	
-<button><a href="/">Back to Account</a></button>
+								<p>Video: </p><br />
+								<iframe width="560" height="315" src="<%= current_artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
+							<% end %>
+						</div>
+					</div>
+					<br />	
+				</div>
+			</div><!-- closed profile -->
+		<div class="col-sm-3"></div>
+	</div>

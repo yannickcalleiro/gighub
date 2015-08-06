@@ -23,27 +23,26 @@
 		<h2>Artist Search</h2>
 		<div class="field">
 		  <%= label_tag(:role)%><br />
-		  <%= select_tag :role, options_for_select(['DJ','Band','Solo'], "DJ"), :class => "js-role"%>
+		  <%= select_tag :role, options_for_select(['DJ','Band','Solo'], "Artist Type"), :class => "form-control js-role"%>
 		</div>
 
 		<br />
 		<div class="field">
 		  <%= label_tag(:hour)%><br />
-		  <%= select_tag :hour, options_for_select((1..10)), :class => "js-hour" %>
+		  <%= select_tag :hour, options_for_select((1..10)), :class => "form-control js-hour"%>
 		</div>
 
 		<br />
 		<div class="field">
 		  <%= label_tag(:price)%><br />
-		  <%= text_field_tag :price, 'budget amount', :class => "js-price" %>
+		  <%= text_field_tag :price, " ", :class => "js-price" %>
 		</div>
+		<br />
 		<p><button class="js-artists">Search</button></p>
 		<br />
 		<div class="js-results"></div>
-		<br />
-		
 
-		<p><button><a href="/events/<%= @event.id %>/edit">Back to Edit Event</a></button></p>
+		<p><a href="/events/<%= @event.id %>/edit">Back to Edit Event</a></p>
 
 
   	</div>

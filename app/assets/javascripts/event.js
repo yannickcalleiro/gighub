@@ -1,4 +1,3 @@
-
 // ***Artist Search***
 $(document).ready(function(){
   $(function(){
@@ -15,7 +14,7 @@ $(document).ready(function(){
       console.log(data)
       data.forEach(function(artist) {
         if(artist.display_name != ""){
-          $('.js-results').append('<button id="' + artist.id + '">Add Artist</button>' +  artist.display_name + '<br />' )
+          $('.js-results').append(artist.display_name + '<button id="' + artist.id + '">Add Artist</button>' +  '<br />' )
           $('#' + artist.id).on('click', addArtistToEvents)
         }
       });
@@ -40,11 +39,11 @@ $(document).ready(function(){
     var request = $.post('/events/' + event_id + '/add_artists/' + artist_id);
     
     request.done(function(event){
-      alert("added artist to event") 
+      alert("Artist to event") 
       setTimeout(2000, window.location.replace("/"))
     })
     request.fail(function(event){
-      alert("Fail")
+      alert("Failed. Please try again")
     })
   };
 })
