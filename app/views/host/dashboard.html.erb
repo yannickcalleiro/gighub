@@ -28,34 +28,41 @@
   </div> <!-- Closed Container -->
 </div><!-- Closed NavBar -->
 
+<div class="create-form">
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
 
-<!-- Panel Group -->
-  <div class="panel-group" >
-    <div class="panel panel-default">
-      <div class="panel-heading">
-		<h3 class="panel-title">Scheduled Events</h3>
-		  </div>
-			<div class="panel-body">
-			  <ul>
-				<% if @events.empty? %>
-					<li>There are no schduled events</li>
-				<% else %>
-					<% @events.each do |evt| %>
-					<li>
-					  <%= evt.title %> 
-					  <%= evt.date %>
-					  <a href="/events/<%= evt.id %>/edit">Edit</a> 
-					</li>
-				  <% end %>
-				<% end %>
-			  </ul>
-			</div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	<div class="panel panel-default">
+	<div class="panel-heading" role="tab" id="headingOne">
+		<h3 class="panel-title">
+		<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		My Scheduled Events
+		</a>
+		</h3>
 		</div>
+		<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+		<div class="panel-body">
+			<% if @events.empty? %>
+				There are no schduled events
+			<% else %>
+				<% @events.each do |evt| %>
+				<p>
+				<a href="/events/<%= evt.id %>/edit" class="list-group-item">
+				  <span class="glyphicon glyphicon-chevron-right"></span>&nbsp; <%= evt.title %> 
+				</a> 
+				</p>
+				
+			  <% end %>
+			<% end %>        
+		</div>
+		</div>
+	</div><!-- closed scheduled events -->
 
 		<div class="panel panel-default">
 			<div class="panel-heading">
 			<h3 class="panel-title">
-			  <a href="/events/new">Create Event</a>
+			  <a href="/events/new" class="nounderline">Create Event</a>
 			</h3>
 		</div>
 		</div>
@@ -63,11 +70,15 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 			<h3 class="panel-title">
-			  <a href="/">Send Payments</a>
+			  <a href="/" class:"nounderline">Send Payments</a>
 			</h3>
 			</div>
 		</div>
     </div>
+  </div><!-- closed dashboard panel -->
+  <div class="col-sm-3"></div>
+ </div>
+
 
 
 			

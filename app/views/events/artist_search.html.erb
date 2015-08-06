@@ -1,33 +1,54 @@
 <h1>Add artist to Event</h1>
 
-<!-- Artist Search -->
-<span style="display:none;" id="<%= @event.id %>" class="event-id"></span>
+<!-- Login Page -->
+<div class="navbar navbar-default navbar-fixed-top navbar-right">
+  <div class="navbar navbar-brand-glyphicon">
+  <span class="glyphicon glyphicon-headphones"></span>
+  </div>
+  	<a href="/" class="navbar-brand">Gighub.com</a>
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+  </div> <!-- Closed Container -->
+</div><!-- Closed NavBar -->
 
-<div class="field">
-  <%= label_tag(:role)%><br />
-  <%= select_tag :role, options_for_select(['DJ','Band','Solo'], "DJ"), class: "js-role" %>
+
+<div class="create-form">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-6">
+
+		<!-- Artist Search -->
+		<span style="display:none;" id="<%= @event.id %>" class="event-id"></span>
+
+		<h2>Artist Search</h2>
+		<div class="field">
+		  <%= label_tag(:role)%><br />
+		  <%= select_tag :role, options_for_select(['DJ','Band','Solo'], "DJ"), :class => "js-role"%>
+		</div>
+
+		<br />
+		<div class="field">
+		  <%= label_tag(:hour)%><br />
+		  <%= select_tag :hour, options_for_select((1..10)), :class => "js-hour" %>
+		</div>
+
+		<br />
+		<div class="field">
+		  <%= label_tag(:price)%><br />
+		  <%= text_field_tag :price, 'budget amount', :class => "js-price" %>
+		</div>
+		<p><button class="js-artists">Search</button></p>
+		<br />
+		<div class="js-results"></div>
+		<br />
+		
+
+		<p><button><a href="/events/<%= @event.id %>/edit">Back to Edit Event</a></button></p>
+
+
+  	</div>
+  	<div class="col-sm-3"></div>
 </div>
-<br />
-<div class="field">
-  <%= label_tag(:hour)%><br />
-  <%= select_tag :hour, options_for_select((1..10)), class: "js-hour" %>
-</div>
-
-<br />
-<div class="field">
-  <%= label_tag(:price)%><br />
-  <%= text_field_tag :price, "Price", class: "js-price" %>
-</div>
-
-<br />
-<p><button class="js-artists">Search</button></p>
 
 
-<ul class="js-results">
-	<h4>Search Results:</h4>
-</ul>
 
-<br />
-<br />
-<p><button><a href="/events/<%= @event.id %>/edit">Back to Edit Event</a></button></p>
-<p><button><a href="/">Back to Account</a></button></p>
