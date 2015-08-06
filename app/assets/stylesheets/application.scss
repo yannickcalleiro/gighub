@@ -14,6 +14,85 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
+.divide-core {
+  width: 100%;
+  height: 28px;
+}
+
+.no-padding-inner {
+    padding: 25px;
+}
+
+.services-box-icon {
+    float: left;
+    padding-right: 25px;
+}
+
+.services-box-info {
+    padding-left: 25px 90px 0px 25px;
+}
+
+.services-box-info h4 {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.services-box-icon i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #80b719;
+  color: #fff;
+  font-size: 17px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.sub-text {
+  margin-top: 15px;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 400;
+  color: #555;
+}
+
+.center-heading h2 strong {
+    font-weight: 800;
+}
+.center-heading h2 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    font-size: 30px;
+}
+
+.core-title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.colored-text {
+  color: #80b719
+}
+
 .banner-button {
   margin-top: 8px;
 }
@@ -80,10 +159,7 @@ h4, .banner-head {
 
 .caption-heading {
   font-size: 4vmax;
-  margin-top: 21px;
   margin-bottom: 10.5px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
   line-height: 1.1;
   color: inherit;
 }
@@ -171,7 +247,6 @@ h4, .banner-head {
     border-top: 1px solid #bbb;
     /* border-bottom: 1px solid $skincolor; */
     margin: auto;
-    margin-bottom: 12px;
 }
 
 .img-box {
