@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 
+
+
 /*!
  * bootswatch v3.3.5
  * Homepage: http://bootswatch.com
@@ -13,9 +15,109 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+.body-top {
+  margin-top: 4%;
+  margin-bottom: 3%;
+  text-align: center;
+  } 
+
+.caption-heading {
+  font-size: 4vmax;
+  margin-top: 21px;
+  margin-bottom: 10.5px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
+}
+.center-line-nav {
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    border-top: 3px solid #80b719;
+    /* border-bottom: 1px solid $skincolor; */
+    margin: auto;
+    margin-top: 0px;
+}
+
+#footer {
+    font-color: white;
+    font-size: 0.9em;
+    padding: 80px 0 0;
+    position: relative;
+    clear: both;
+    background-color: #333333;
+    border-color: #222222;
+}
+
+.footer-col {
+  color: #ffffff;
+}
+
+.bottom-banner {
+  background-color: #80b719;
+  color: #ffffff;
+}
+
+.container-body-text {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 80%;
+}
+
+.divide-head{
+  width: 100%;
+  height: 48px;
+}
+
 .divide-cov{
   width: 100%;
   height: 30px;
+}
+
+.divide-bottom{
+  width: 100%;
+  height: 100px;
+}
+
+.bottom-info {
+  background-color: #f5f5f5;
+}
+.about-img-bottom {
+  height: auto;
+  width: 100%;
+}
+
+.caption {
+  text-align: center;
+}
+
+.center-line-about {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #bbb;
+    /* border-bottom: 1px solid $skincolor; */
+    margin: auto;
+    margin-bottom: 12px;
+
+}
+
+.center-line {
+    display: inline-block;
+    width: 181px;
+    height: 1px;
+    border-top: 1px solid #bbb;
+    /* border-bottom: 1px solid $skincolor; */
+    margin: auto;
+    margin-bottom: 12px;
+}
+
+.img-box {
+  padding: 0px 10px 0px 10px;
 }
 
 .divide-about {
@@ -25,14 +127,16 @@
 
 .landing-img {
   max-width: 100%;
-  max-width: 100%;
+  height: auto;
+  border-bottom: 3px solid #80b719;
 }
 
 .about-img {
   padding: 0px 3px 0px 3px;
   height: auto;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 7px;
+  border-bottom: 3px solid #80b719;
 }
 
 .caption {
@@ -42,7 +146,7 @@
     z-index: 10;
     color: #fff;
     text-align: center;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    text-shadow: 1px 1px 0 #000;
     bottom: auto;
     margin-top: 115px;
 }
@@ -7146,6 +7250,15 @@ input[type="checkbox"] {
 }
 .modal .close {
   color: #222222;
+}
+
+@media only screen and (max-width : 720px) {
+  .caption{
+    display: none;
+  }
+  .cover-photo{
+    display: none;
+  }
 }/*!/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
