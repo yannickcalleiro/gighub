@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 
-
-
 /*!
  * bootswatch v3.3.5
  * Homepage: http://bootswatch.com
@@ -15,6 +13,49 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+.footer-sig {
+    padding-top: 23px;
+    color: white;
+    text-align: center;
+}
+.body-login {
+    background-color: #f5f5f5;
+}
+
+.well, .login-box {
+  margin-bottom: 7%;
+  margin-top: 6%;
+}
+.login-header {
+  text-align: center;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+#glyphicon-headphones-login {
+  color: #333333;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-size: 24px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.glyphicon-headphones {
+    color: white;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-size: 18px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navbar-brand-glyphicon {
+  float: left;
+  padding: 12px 0px 0px 15px;
+  font-size: 19px;
+  height: 45px;
+}
+
 .body-top {
   margin-top: 4%;
   margin-bottom: 3%;
@@ -44,11 +85,11 @@
 #footer {
     font-color: white;
     font-size: 0.9em;
-    padding: 80px 0 0;
-    position: relative;
-    clear: both;
+    padding-top: 40px;
     background-color: #333333;
     border-color: #222222;
+    position: relative;
+    clear: both;
 }
 
 .footer-col {
@@ -275,6 +316,10 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  background-color: #80b719;
+  color: white;
+  border: 1px solid grey;
+  font-size: 19px;
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -410,8 +455,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -4126,6 +4171,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+  outline: none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
 .input-group-addon:first-child {
   border-right: 0;
@@ -4165,6 +4214,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn-group {
+  background-color: #80b719;
+  outline: none;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border-radius: 0px 2px 2px 0px;
   z-index: 2;
   margin-left: -1px;
 }
@@ -4363,7 +4419,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 45px;
-  margin-bottom: 21px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {

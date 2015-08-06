@@ -1,12 +1,34 @@
+
 <!-- Login Page -->
-<div class="navbar">
-</div>
+<div class="navbar navbar-default navbar-fixed-top navbar-right">
+  <div class="navbar navbar-brand-glyphicon">
+  <span class="glyphicon glyphicon-headphones"></span>
+  </div>
+  <a href="/" class="navbar-brand">Gighub.com</a>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  </div> <!-- Closed Container -->
+  <span class="center-line-nav"></span>
+</div><!-- Closed NavBar -->
+
+
+<div class="body-login">
 <div class="col-md-4"></div>
-<div class="col-md-4">
+<div class="col-md-4 login-box">
 <!-- Login Form -->
   <div class="well bs-component">
 <!-- Title -->
+  <div class="row login-header">
+    <span class="glyphicon glyphicon-headphones" id="glyphicon-headphones-login"></span>
     <h3>GitHub.com</h3>
+  </div>
 
 <!-- Inputs -->
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -43,3 +65,5 @@
 </div>
 <div class="col-md-4">
 </div>
+<div class="body-login">
+</div><!-- Body closed -->
