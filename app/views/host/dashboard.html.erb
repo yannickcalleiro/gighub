@@ -1,17 +1,33 @@
-<!DOCTYPE>
-<head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
+<!-- Header -->
+<div class="divide-head"></div>
 
-Welcome <%= current_host.name %>!
 
-<!-- Log Out Button -->
-	<button class="js-submit" type="submit">
-		<a href="/hosts/sign_out" data-method="delete">Sign Out</a>
-	</button>
-<br>
-<br>
+
+<!-- Static Navagation -->
+<div class="navbar navbar-default navbar-fixed-top navbar-right">
+  <div class="navbar navbar-brand-glyphicon">
+  <span class="glyphicon glyphicon-headphones"></span>
+  </div>
+  <a href="/" class="navbar-brand">Gighub.com</a>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  
+<!-- Signout -->
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="/hosts/sign_out" data-method="delete">Sign Out</a></li>
+      </ul>
+    </div><!-- closed sign out -->
+  </div> <!-- Closed Container -->
+</div><!-- Closed NavBar -->
+
 
 <!-- Panel Group -->
   <div class="panel-group" >
