@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-	before_action :authenticate_artist!
+	before_action :authenticate_artist!, except: [:show]
 
 	def index
 		render('dashboard')
@@ -14,7 +14,13 @@ class ArtistsController < ApplicationController
 
 	def show
 		@artists = Artist.all
+		@artist = Artist.find_by_id(params[:id])
 		render('show')
+	end
+
+	def profile
+		@artist = Artist.find_by_id(params[:id])
+		render('profile')
 	end
 
 end

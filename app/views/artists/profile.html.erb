@@ -35,36 +35,36 @@
 				<div class="well bs-component">
 					<div class="row artist-top"></div>
 					<div class="col-sm-6">
-						<% if @artist.image.url != "/images/original/missing.png" %>
-						 <%= image_tag @artist.image.url(:medium) %>
+						<% if current_artist.image.url != "/images/original/missing.png" %>
+						 <%= image_tag current_artist.image.url(:medium) %>
 						<% else %>
 						  <img src="http://www.crazyleafdesign.com/blog/wp-content/uploads/2012/10/8-30-spooky-skull-logos.jpg"></a><br />
 						<% end %>					
 					</div>
 					<div class="col-sm-6">
-						<% if @artist.display_name.present? %>
-							<p><h1><%= @artist.display_name %></h1></p> 
+						<% if current_artist.display_name.present? %>
+							<p><h1><%= current_artist.display_name %></h1></p> 
 						<% else %>
-							 <p><h1><%= @artist.name %></h1></p>
+							 <p><h1><%= current_artist.name %></h1></p>
 						<% end %>
 						
-						About: <%= @artist.about %><br />
+						About: <%= current_artist.about %><br />
 							<br />
 					</div>
 				<br />
 					<div class="row artist-bottom">
 						<div class="media-player">
-							<% if @artist.video_info.nil? %>
+							<% if current_artist.video_info.nil? %>
 								<p>Audio: </p> <br />
-								<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= @artist.soundcloud_address %>"></iframe>
+								<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe>
 
 								<% else %>
 
 								<p>Audio: </p><br />
-								<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= @artist.soundcloud_address %>"></iframe><br />
+								<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= current_artist.soundcloud_address %>"></iframe><br />
 
 								<p>Video: </p><br />
-								<iframe width="560" height="315" src="<%= @artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
+								<iframe width="560" height="315" src="<%= current_artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
 							<% end %>
 						</div>
 					</div>
