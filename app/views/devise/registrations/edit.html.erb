@@ -1,3 +1,35 @@
+<!-- Header -->
+<div class="divide-head-artist"></div>
+
+<!-- Static Navagation -->
+<div class="navbar navbar-default navbar-fixed-top navbar-right">
+  <div class="navbar navbar-brand-glyphicon">
+  <span class="glyphicon glyphicon-headphones"></span>
+  </div>
+  <a href="/" class="navbar-brand">Gighub.com</a>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  
+<!-- Signout -->
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+    <li><a href="/hosts/sign_out" data-method="delete">Sign Out</a></li>
+      </ul>
+    </div><!-- closed sign out -->
+  </div> <!-- Closed Container -->
+</div><!-- Closed NavBar -->
+
+
+<div class="create-form">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
 <h2><%= resource_name.to_s.humanize %> Profile</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f| %>
@@ -5,12 +37,12 @@
 <!-- Edit Artist Profile -->
   <%= devise_error_messages! %>
   <div class="field">
-    <%= f.label(:display_name)%><br />
+    <%= f.label(:display_name)%>:
     <%= f.text_field(:display_name, autofocus: true)%>
   </div>
 
   <div class="field">
-    <%= f.label(:image)%><br />
+    <%= f.label(:image)%>:
     <%= f.file_field(:image)%>
   </div>
 
@@ -20,29 +52,29 @@
   </div>
 
   <div class="field">
-    <%= f.label(:about)%><br />
+    <%= f.label(:about)%>:
     <%= f.text_field(:about)%>
   </div>
 
   <div class="field">
-    <%= f.label(:soundcloud_address)%><br />
+    <%= f.label(:soundcloud_address)%>:
     <%= f.text_field(:soundcloud_address)%>
   </div>
 
 
   <div class="field">
-    <%= f.label(:youtube_address)%><br />
+    <%= f.label(:youtube_address)%>:
     <%= f.text_field(:youtube_address)%>
   </div>
 
   <div class="field">
-    <%= f.label(:price)%><br />
+    <%= f.label(:price)%>:
     <%= f.text_field(:price)%>
   </div>
 
 
   <div class="field">
-    <%= f.label(:hour)%><br />
+    <%= f.label(:hour)%>:
     <%= f.text_field(:hour)%>
   </div>
 
@@ -52,12 +84,12 @@
 <h2>Edit <%= resource_name.to_s.humanize %> Account</h2>
   
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>:
     <%= f.text_field :name, autocomplete: "off"%>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>:
     <%= f.email_field :email %>
   </div>
 
@@ -91,3 +123,7 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back to Account", :back %>
+
+    </div>
+    <div class="col-sm-3"></div>
+</div>
