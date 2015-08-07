@@ -30,45 +30,41 @@
 
 <div class="create-form">
 <div class="col-sm-3"></div>
-		
 			<div class="col-sm-6">
 				<div class="well bs-component">
-					<div class="row artist-top"></div>
-					<div class="col-sm-6">
 						<% if @artist.image.url != "/images/original/missing.png" %>
 						 <%= image_tag @artist.image.url(:medium) %>
 						<% else %>
-						  <img src="http://www.crazyleafdesign.com/blog/wp-content/uploads/2012/10/8-30-spooky-skull-logos.jpg"></a><br />
+						  <img class="profile-pic" src="http://www.crazyleafdesign.com/blog/wp-content/uploads/2012/10/8-30-spooky-skull-logos.jpg"></a><br />
 						<% end %>					
-					</div>
-					<div class="col-sm-6">
+						<br />
 						<% if @artist.display_name.present? %>
 							<p><h1><%= @artist.display_name %></h1></p> 
 						<% else %>
 							 <p><h1><%= @artist.name %></h1></p>
-						<% end %>
-						
+						<% end %>		
 						About: <%= @artist.about %><br />
 							<br />
-					</div>
 				<br />
-					<div class="row artist-bottom">
+					
 						<div class="media-player">
 							<% if @artist.video_info.nil? %>
-								<p>Audio: </p> <br />
+								Audio: <br />
 								<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= @artist.soundcloud_address %>"></iframe>
 
 								<% else %>
 
-								<p>Audio: </p><br />
+								Audio: <br />
+								<br />
 								<iframe width="560" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= @artist.soundcloud_address %>"></iframe><br />
-
-								<p>Video: </p><br />
+							
+								<br />Video: <br />
+								<br />
 								<iframe width="560" height="315" src="<%= @artist.video_info.embed_url %>" frameborder="0" allowfullscreen></iframe>
 							<% end %>
-						</div>
+						<br />
 					</div>
-					<br />	
+						
 				</div>
 			</div><!-- closed profile -->
 		<div class="col-sm-3"></div>
