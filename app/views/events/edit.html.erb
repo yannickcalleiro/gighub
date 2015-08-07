@@ -1,14 +1,52 @@
-<h1>Edit Event Page</h1>
+<!-- Header -->
+<div class="divide-head"></div>
 
-<p>This event is called <%= @events.title %>. </p>
+<!-- Static Navagation -->
+<div class="navbar navbar-default navbar-fixed-top navbar-right">
+  <div class="navbar navbar-brand-glyphicon">
+  <span class="glyphicon glyphicon-headphones"></span>
+  </div>
+  <a href="/" class="navbar-brand">Gighub.com</a>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  
+<!-- Signout -->
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="/hosts/sign_out" data-method="delete">Sign Out</a></li>
+      </ul>
+    </div><!-- closed sign out -->
+  </div> <!-- Closed Container -->
+</div><!-- Closed NavBar -->
 
-<% if @events.artist.present? %>
-	<%= @events.artist %> will be performing. 
+<div class="create-form">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-6">
+		<div class="well bs-component">
+		<h1>Edit Event Page</h1>
 
-<br />
-<% else %>
-	<a href="/events/<%= @events.id %>/artist_search">Add artist to this event</a>
-<% end %>
+		This event is called <%= @events.title %>. <br />
+		Date: <%= @events.date %><br />
+		Time: <%= @events.time %><br />
+		<br />
+		<% if @events.artist.present? %>
+			<%= @events.artist.name %> will be performing. 
+		<br />
+		<% else %>
+			<a href="/events/<%= @events.id %>/artist_search">Add artist to this event</a>
+		<% end %>
 
-<br />
-<p><a href="/">Back to account</a></p>
+		<br />
+		
+	</div>
+</div>
+
+<div class="col-sm-3"></div>
+</div>

@@ -17,6 +17,7 @@ class EventsController < ApplicationController
 	end
 
 	def edit
+		@artist = Artist.all
 		@events = Event.find(params[:id])
 		render("edit")
 	end

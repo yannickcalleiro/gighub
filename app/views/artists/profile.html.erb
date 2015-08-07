@@ -32,19 +32,21 @@
 <div class="col-sm-3"></div>
 			<div class="col-sm-6">
 				<div class="well bs-component">
-						<% if current_artist.image.url != "/images/original/missing.png" %>
-						 <%= image_tag current_artist.image.url(:medium) %>
-						<% else %>
-						  <img src="http://www.crazyleafdesign.com/blog/wp-content/uploads/2012/10/8-30-spooky-skull-logos.jpg"></a><br />
-						<% end %>					
-						<br />
 						<% if current_artist.display_name.present? %>
 							<p><h1><%= current_artist.display_name %></h1></p> 
 						<% else %>
 							 <p><h1><%= current_artist.name %></h1></p>
 						<% end %>
 						<br />
-						About: <%= current_artist.about %><br />
+						<% if current_artist.image.url != "/images/original/missing.png" %>
+						 <%= image_tag current_artist.image.url(:medium) %>
+						<% else %>
+						  <img src="http://www.crazyleafdesign.com/blog/wp-content/uploads/2012/10/8-30-spooky-skull-logos.jpg"></a><br />
+						<% end %>					
+						<br />
+						<br />
+						<%= current_artist.about %>
+						<br />
 						<br />
 				
 						<div class="media-player">
