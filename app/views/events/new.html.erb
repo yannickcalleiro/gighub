@@ -25,6 +25,7 @@
   </div> <!-- closed container -->
 </div><!-- closed navbar -->
 
+<div class="body-login">
 <div class="create-form">
 <div class="col-sm-3"></div>
 <div class="col-sm-6">
@@ -34,22 +35,22 @@
 	<%= form_for @events do |frm| %>
 		<div class="form_group">
 			<% frm.label(:title)%><br />
-			<%= frm.text_field(:title, placeholder:"event name", :class => "form-control")%>
+			<%= frm.text_field(:title, placeholder:"event name", :class => "form-group")%>
 		</div>
 
 		<div class="form_group">
 			<% frm.label(:time)%><br /> 
-			<%= frm.datetime_field(:time, placeholder:"start time", :class => "form-control")%>
+			<%= frm.datetime_field(:time, placeholder:"start time", :class => "form-group")%>
 		</div>
 
 		<div class="form_group"><br />
 			<% frm.label(:location)%> 
-			<%= frm.text_field(:location, placeholder:"address location",:class => "form-control")%>
+			<%= frm.text_field(:location, placeholder:"address location",:class => "form-group")%>
 		</div>
 
 		<div class="form_group"><br />
 			<%frm.label(:date)%> 
-			<%= frm.date_field(:date, :class => "form-control")%>
+			<%= frm.date_field(:date, :class => "form-group")%>
 		</div>
 		<br />
 		<button type="submit">Create New Event</button>		
@@ -60,4 +61,5 @@
 
 <div class="col-sm-3"></div>
 </div><!-- close container form -->
+</div>
 

@@ -14,7 +14,7 @@ $(document).ready(function(){
       console.log(data)
       data.forEach(function(artist) {
         if(artist.display_name != ""){
-          $('.js-results').append(artist.display_name + '<button id="' + artist.id + '">Add Artist</button>' +  '<br />' )
+          $('.js-results').append('<a href="/artists/' + artist.id + '">' + artist.display_name + '</a>' + '<br />' + '<button id="' + artist.id + '">Add Artist</button>' +  '<br />')
           $('#' + artist.id).on('click', addArtistToEvents)
         }
       });
